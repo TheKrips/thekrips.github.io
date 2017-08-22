@@ -152,8 +152,14 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
-  color: #fed136;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  color: white;
+  font-family: "Helvetica Neue";
+    font-weight: 600;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -226,7 +232,27 @@ fieldset[disabled] .btn-xl.active {
     font-size: 1.5em;
   }
 }
+
+.zero-style {
+    padding: 10px !important;
+}
+
+.zero-style-team {
+    padding: 20px !important;
+}
+.zero-style-about {
+    padding: 35px !important;
+}
+.vertical-align-top {
+    display: flex;
+    margin: 50px
+}
+.vertical-align {
+    display: flex;
+    margin: 0px;
+}
 header {
+  position: relative;
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -238,44 +264,15 @@ header {
   text-align: center;
   color: white;
 }
-header .intro-text {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-header .intro-text .intro-lead-in {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 25px;
-}
-header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
+header .glyphicon {
+    position: absolute;
+    margin-top: 480px;
+    bottom: 0;
 }
 @media (min-width: 768px) {
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
-  }
-  header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: italic;
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 25px;
-  }
-  header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 75px;
-    line-height: 75px;
-    margin-bottom: 50px;
   }
 }
 
@@ -292,8 +289,13 @@ section h3.section-subheading {
   font-weight: 400;
   margin-bottom: 75px;
 }
+.margin-about {
+  margin-bottom: 50px !important;
+}
 @media (min-width: 768px) {
-
+section{
+    padding: 150px 0
+    }
 .service-heading {
   margin: 15px 0;
   text-transform: none;
@@ -374,7 +376,7 @@ section h3.section-subheading {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #f1f1f1;
+  background-color: black;
   left: 40px;
   margin-left: -1.5px;
 }
@@ -389,7 +391,7 @@ section h3.section-subheading {
   display: table;
 }
 .timeline > li:after {
-  clear: both;
+  clear:inherit;
 }
 .timeline > li .timeline-panel {
   width: 100%;
@@ -420,7 +422,7 @@ section h3.section-subheading {
   background-color: #fed136;
   color: white;
   border-radius: 100%;
-  border: 7px solid #f1f1f1;
+  border: 2px solid black;
   text-align: center;
 }
 .timeline > li .timeline-image h4 {
@@ -536,7 +538,6 @@ section h3.section-subheading {
 }
 .team-member img {
   margin: 0 auto;
-  border: 7px solid white;
 }
 .team-member h4 {
   margin-top: 25px;
@@ -637,6 +638,9 @@ ul.social-buttons li a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+}
+.facebook-center{
+  margin: 15px;
 }
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
