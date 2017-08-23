@@ -5,7 +5,7 @@
  */
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Verdana", Helvetica, Arial, sans-serif;
 }
 .text-muted {
   color: #777777;
@@ -152,14 +152,9 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
-  color: white;
+  color: #fed136;
   font-family: "Helvetica Neue";
     font-weight: 600;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -183,11 +178,13 @@ fieldset[disabled] .btn-xl.active {
   background-color: #fed136;
 }
 .navbar-custom .nav li a {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue";
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
-  color: white;
+color: rgba(254, 209, 54);
+text-shadow: 2px 5px 6px rgba(255,255,255),
+                 0px -5px 35px rgba(255,255,255,0.1);
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
@@ -624,6 +621,8 @@ footer ul.quicklinks {
 }
 ul.social-buttons {
   margin-bottom: 0;
+  text-align: center;
+    list-style-type: none;
 }
 ul.social-buttons li a {
   display: block;
