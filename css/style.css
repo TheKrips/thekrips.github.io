@@ -564,14 +564,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #subscribe .subscribe-title {
+  padding-top: 32px;
   color: #fff;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
 }
 
-#subscribe .subscribe-text {
+/* #subscribe .subscribe-text {
   color: #fff;
-}
+} -*/
 
 #subscribe .subscribe-btn-container {
   text-align: center;
@@ -675,12 +676,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #testimonials .profile .pic {
-  border-radius: 50%;
-  border: 6px solid #fff;
+
   margin-bottom: 15px;
   overflow: hidden;
-  height: 260px;
-  width: 260px;
 }
 
 #testimonials .profile .pic img {
