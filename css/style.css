@@ -532,11 +532,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .service-item:hover .service-icon {
-  background: #fff;
+  background: #03C4EB;
 }
 
 #services .service-item:hover .service-icon i {
-  color: #03C4EB;
+  color: #fff;
 }
 
 #services .service-title {
