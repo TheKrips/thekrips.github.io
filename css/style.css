@@ -583,8 +583,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
-#services .service-title a {
-  color: #111;
+#services .service-title {
+  color: #000000;
 }
 
 #services .service-description {
