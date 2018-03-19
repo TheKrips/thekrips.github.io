@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 18px;
   outline: none;
 }
 
@@ -511,10 +511,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Services2 Section
 --------------------------------*/
+/*
+
 #services2 {
-  /*background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("../img/subscribe-bg2.jpg") fixed center center;
-  background-size: cover;
-  \--------------------------------*/
+
   padding: 80px 0 60px 0;
 }
 #services2 .service-title {
@@ -531,6 +531,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align:  center;
   }
 }
+--------*/
+
 
 /* Services Section
 --------------------------------*/
@@ -582,6 +584,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+#services .service-title { 
+ font-size: 14px !important;
+  }
+}
+
 /* Subscribe Section
 --------------------------------*/
 #subscribe {
@@ -595,6 +603,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
+}
+
+@media (max-width: 991px) {
+ #subscribe .subscribe-title {
+  text-align: center;
+  }
 }
 
 /* #subscribe .subscribe-text {
@@ -638,6 +652,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
+}
+
+@media (max-width: 991px) {
+ #subscribe2 .subscribe-title {
+  text-align: center;
+  }
 }
 
 /* #subscribe .subscribe-text {
@@ -693,7 +713,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #testimonials .profile h4 {
   font-weight: 700;
-  font-size: 27 !important;
+  font-size: 30px !important;
   color: #03C4EB;
   margin-bottom: 5px;
 }
