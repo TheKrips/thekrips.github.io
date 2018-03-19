@@ -484,7 +484,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-container {
-  background: url(../img/about-img.jpg) left top no-repeat;
+  background: url(../img/about-img.jpg) left center no-repeat;
+  background-size: 50%;
 }
 
 #about .about-content {
@@ -505,10 +506,36 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
+
+
+
+/* Services2 Section
+--------------------------------*/
+#services2 {
+  /*background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("../img/subscribe-bg2.jpg") fixed center center;
+  background-size: cover;
+  \--------------------------------*/
+  padding: 80px 0 60px 0;
+}
+#services2 .service-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+#services2 .service-title {
+  text-align:  center;
+  }
+#services2 .service-description {
+    text-align:  center;
+  }
+}
+
 /* Services Section
 --------------------------------*/
 #services {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/services-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/services-bg.jpg") fixed center center;
   background-size: cover;
   padding: 80px 0 60px 0;
 }
@@ -598,70 +625,48 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #03C4EB;
   border: 2px solid #03C4EB;
 }
-
-/* Portfolio Section
+/* Subscribe 2 Section
 --------------------------------*/
-#portfolio {
-  background: #fff;
-  padding: 80px 0;
-}
-
-#profile .portfolio-item {
-  background-position: center center;
+#subscribe2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-bg2.jpg) fixed center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 260px;
-  width: 100%;
-  display: table;
-  overflow: hidden;
-  margin-bottom: 30px;
+  padding: 60px 0;
 }
 
-#portfolio .portfolio-item .details {
-  height: 260px;
-  background: #fff;
-  display: table-cell;
-  vertical-align: middle;
-  opacity: 0;
-  transition: 0.3s;
-  text-align: center;
-}
-
-#portfolio .portfolio-item .details h4 {
-  font-size: 16px;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -webkit-transform: translate3d(0, -15px, 0);
-  transform: translate3d(0, -15px, 0);
+#subscribe2 .subscribe-title {
+  padding-top: 32px;
+  color: #fff;
+  font-size: 30px;
   font-weight: 700;
-  color: #333333;
 }
 
-#portfolio .portfolio-item .details span {
-  display: block;
-  color: #666666;
-  font-size: 13px;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -webkit-transform: translate3d(0, 15px, 0);
-  transform: translate3d(0, 15px, 0);
+/* #subscribe .subscribe-text {
+  color: #fff;
+} -*/
+
+#subscribe2 .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
 }
 
-#portfolio .portfolio-item:hover .details {
-  opacity: 0.8;
+#subscribe2 .subscribe-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-#portfolio .portfolio-item:hover .details h4 {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-#portfolio .portfolio-item:hover .details span {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+#subscribe2 .subscribe-btn:hover {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
 }
 
 /* Testimonials Section
@@ -673,6 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #testimonials .profile {
   text-align: center;
+  margin-top: 10px;
 }
 
 #testimonials .profile .pic {
@@ -687,6 +693,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #testimonials .profile h4 {
   font-weight: 700;
+  font-size: 27 !important;
   color: #03C4EB;
   margin-bottom: 5px;
 }
@@ -699,9 +706,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   background: #fff;
   padding: 60px;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
-  font-style: italic;
   border-radius: 5px;
 }
 
