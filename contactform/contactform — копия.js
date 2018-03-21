@@ -82,9 +82,20 @@ jQuery(document).ready(function($) {
                 url: "contactform/contactform.php",
                 data: str,
                 success: function(msg){
-                    console.log(data);
+                   // alert(msg);
+                    if(msg == 'OK') {
+                        $("#sendmessage").addClass("show");         
+                        $("#errormessage").removeClass("show"); 
+                        $('.contactForm').find("input, textarea").val("");
+                    }
+                    else {
+                        $("#sendmessage").removeClass("show");
+                        $("#errormessage").addClass("show");
+                        $('#errormessage').html(msg);
+                    }
+                    
                 }
-            }};
+            });
 
         return false;
     });
