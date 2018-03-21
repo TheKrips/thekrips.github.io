@@ -132,7 +132,7 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Направления</h3>
+          <h3 class="section-title">Програма тренировок</h3>
           <div class="section-title-divider"></div>
           <p class="section-description"> </p>
         </div>
@@ -141,8 +141,8 @@
       <div class="row">
         <div class="col-md-4 service-item">
           <div class="service-icon"></div>
-          <h4 class="service-title">Функциональный тренинг</h4>
-          <p class="service-description">Комплекс упражнений для развития разных физических качеств: силы, выносливости, координации</p>
+          <h4 class="service-title">Пилатес</h4>
+          <p class="service-description">Новое направление фитнеса для развития мышц всего тела и улучшения осанки</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"></i></div>
@@ -151,7 +151,7 @@
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"></div>
-          <h4 class="service-title">Стречинг</h4>
+          <h4 class="service-title">Стретчинг</h4>
           <p class="service-description">Вид аэробики направленный на растяжку мышц и повышение гибкости вашего тела</p>
         </div>
         <div class="col-md-4 service-item">
@@ -166,8 +166,8 @@
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"></div>
-          <h4 class="service-title">Пилатес</h4>
-          <p class="service-description">Новое направление фитнеса для развития мышц всего тела и улучшения осанки</p>
+          <h4 class="service-title">Функциональный тренинг</h4>
+          <p class="service-description">Комплекс упражнений для развития разных физических качеств: силы, выносливости, координации</p>
         </div>
       </div>
     </div>
@@ -403,15 +403,16 @@
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Введите минимум 4 символа" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:3" data-msg="Введите минимум 3 символа" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="telnumber" class="form-control" name="number" id="number" placeholder="Номер телефона" data-rule="minlen:4" data-msg="Пожалуйста, введите корректный email" />
+                <input type="telnumber" class="form-control" name="telnumber" id="telnumber" placeholder="Номер телефона" data-rule="minlen:9" data-msg="Пожалуйста, введите корректный номер - в формате 0ХХХХХХХХХ" />
                 <div class="validation"></div>
               </div>
               </div>
               <div class="text-center"><button type="submit">Оставить заявку</button></div>
+              <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
             </form>
           </div>
         </div>
