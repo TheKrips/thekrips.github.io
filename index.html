@@ -39,335 +39,75 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+ <!-- Tabular library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/js/tabulator.min.js"></script>
+
+  <script type="text/javascript" src="tabulator.js"></script>
+
+
+
 </head>
 
 <body>
   <div id="preloader"></div>
+  
 
-  <!--==========================
-  Hero Section
-  ============================-->
-  <section id="hero">
-    <div class="hero-container">
-      <div class="wow fadeIn">
-        <div class="hero-logo">
-          <img class="" src="img/logo5.png" alt="FitColumbus">
-        </div>
+      <div id="example-table"></div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/luxon/build/global/luxon.min.js"></script>
+        
+    <script type="text/javascript" src="/js/tabulator/5.1/tabulator.min.js"></script>
+    <script type="text/javascript">
+  //sample data
+  var tabledata = [
+    {id:1, name:"Oli Bob", age:"12", col:"red", dob:"12/08/2017"},
+    {id:2, name:"Mary May", age:"1", col:"blue", dob:"14/05/1982"},
+    {id:3, name:"Christine Lobowski", age:"42", col:"green", dob:"22/05/1982"},
+    {id:4, name:"Brendon Philips", age:"125", col:"orange", dob:"01/08/1980"},
+    {id:5, name:"Margret Marmajuke", age:"16", col:"yellow", dob:"31/01/1999"},
+  ];
 
-        <h1>Фитнес-тур на Кипр уже в апреле</h1>
-        <h2><span class="rotating">Солнечный Кипр,  21 - 28 апреля, 7 дней</span></h2>
-        <div class="actions">
-          <a href="#about" class="btn-services">Подробнее о туре</a>
+  var table = new Tabulator("#example-table", {
+    height:200, // set height of table to enable virtual DOM
+    data: JSON.parse(response), //load initial data into table
+    layout:"fitColumns", //fit columns to width of table (optional)
+    columns:[ //Define Table Columns
 
-        </div>
-      </div>
-    </div>
-  </section>
+        { title: 'Статья', field: 'title', width: 550 },
+        { title: 'Количество голосов', field: 'countRates', align: 'left', formatter: 'progress' },
+        { title: 'Средняя оценка', field: 'rating' }
+    ],
+      rowClick:function(e, row){ //trigger an alert message when the row is clicked
+        alert("Row " + row.getIndex() + " Clicked!!!!");
+      },
+  });
+</script>
 
-  <!--==========================
-  Header Section
-  ============================-->
-  <header id="header">
-    <div class="container">
 
-      <div id="logo" class="pull-left">
-        <a href="#hero"><img src="img/logo5.png" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Header 1</a></h1>-->
-      </div>
+<!-- dsfdsf 
+<div id="example-table">
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="#about">О туре</a></li>
-          <li><a href="#services">Направления</a></li>
-          <li><a href="#testimonials">Тренеры</a></li>
-          <li><a href="#team">Что входит</a></li>
-          <li><a href="#contact">Связаться</a></li>
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
-    </div>
-  </header>
-  <!-- #header -->
+    <script type="text/javascript">
+var table = new Tabulator('#example-table', {
+    data: JSON.parse(response),
+    layout: 'fitColumns',
+    columns: [
+        { title: 'Статья', field: 'title', width: 550 },
+        { title: 'Количество голосов', field: 'countRates', align: 'left', formatter: 'progress' },
+        { title: 'Средняя оценка', field: 'rating' }
+    ]
+});
 
-  <!--==========================
-  About Section
-  ============================-->
-  <section id="about">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">О нас</h3>
-          <div class="section-title-divider"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container about-container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-6 col-md-push-6 about-content">
-          <h2 class="about-title" style="text-align: center;">МЫ - FIT COLUMBUS</h2>
-          <p class="about-text">
-             Наши увлечения - фитнесс, саморазвитие и путешествие. 
-              Уже 15 лет мы занимаемся любимым делом и являемся сертифицированными специалистами в разных фитнес-направлениях. 
-          </p>
-          <p class="about-text">
-            Этой весной мы отправляемся на Кипр и приглашаем присоединиться к нам в команду! 
-            По плану у нас:
-            <br>- правильное и системное питание
-            <br>- ежедневные разнообразные тренировки для достижения максимального результата за короткий период 
-            <br>- 7 динамичных дней на солнечном острове
-          </p>
-          <p class="about-text">
-           Нестандартный отпуск - после которого вы возвращаетесь с новыми физическими возможностями и без лишнего балласта
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+</script>
 
-  <!--==========================
-  Services Section
-  ============================-->
-  <section id="services">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Програма тренировок</h3>
-          <div class="section-title-divider"></div>
-          <p class="section-description"> </p>
-        </div>
-      </div>
+</div>
 
-      <div class="row">
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title">Пилатес</h4>
-          <p class="service-description">Новое направление фитнеса для развития мышц всего тела и улучшения осанки</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></i></div>
-          <h4 class="service-title">Тренажерный зал</h4>
-          <p class="service-description">Занятия с весом для развития силы, укрепления мышечного корсета и корректирование формы тела</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title">Стретчинг</h4>
-          <p class="service-description">Вид аэробики направленный на растяжку мышц и повышение гибкости вашего тела</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title">Strip Dance</h4>
-          <p class="service-description">Женский танец для самовыражения, развития женственности и красивой самоподачи</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title">PortDeBras</h4>
-          <p class="service-description">Авторская программа которая совмещает хореографию, йогу, пилатес и фитнес</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title">Функциональный тренинг</h4>
-          <p class="service-description">Комплекс упражнений для развития разных физических качеств: силы, выносливости, координации</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-  Subscrbe Section
-  ============================-->
-  <section id="subscribe">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="subscribe-title">Мы на Facebook</h3>
-         <!-- <p class="subscribe-text">Отдых с пользой под чутким руководством профессиональных тренеров!</p> -->
-        </div>
-        <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="https://www.facebook.com/fitcolumbus/" target="_blank">Связаться с нами</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-  Testimonials Section
-  ============================-->
-  <section id="testimonials">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Тренерский состав</h3>
-          <div class="section-title-divider"></div>
-        <!--  <p class="section-description">Erdo lide, nora porodo filece, salvam esse se, quod concedimus ses haec dicturum fuisse</p> -->
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-xs-12">
-          <div class="profile">
-            <div class="pic"><img src="img/coach_1.jpg" alt=""></div>
-            <h4>Евгения Самсоникова</h4>
-          </div>
-        </div>
-        <div class="col-md-9 col-xs-12">
-          <div class="quote">
-             <p style="color: #027fc1; font-weight: 700">Инструктор групповых программ, персональный тренер, КМС по спортивной гимнастике.</p> 
-              Сертифицированный инструктор по направлениям: <br>
-              <ul>
-              <li>Functional training </li>
-              <li>Pilates  </li>
-              <li>Stretching  </li>
-              <li>Strip dance  </li>
-              <li>PortDeBras</li>  
-              <li>Силовые и реабилитационные программы </li>
-              <li>Диетологическое сопровождение в групповом и персональном формате </li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3 col-md-push-9 col-xs-12">
-          <div class="profile">
-            <div class="pic"><img src="img/coach_2.jpg" alt=""></div>
-            <h4>Наталия Доляновская</h4>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-md-pull-3 col-xs-12">
-          <div class="quote">
-            <p style="color: #027fc1; font-weight: 700">Персональный тренер, физический реабилитолог консультант по спортивному питанию.</p>
-            Cертифицированный инструктор по направлениям: 
-            <ul>
-            <li>Тренажерный зал </li>
-            <li>EMS тренинг </li>
-            <li>Functional training </li>
-            <li>TRX </li>
-            <li>Step </li>
-            <li>Dance </li>
-            <li>Коррекция веса </li>
-            <li>Составление реабилитационных программ</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
- <!--==========================
-  Что входит Section
-  ============================-->
-   <!--
-    <section id="services2">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">21 - 28 апреля <br> 690 евро <br>В стоимость включено</h3>
-          <div class="section-title-divider"></div>
-          <p class="section-description"> </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title"><a href="">Перелет</a></h4>
-          <p class="service-description">Киев - Айя-Напа - Киев</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></i></div>
-          <h4 class="service-title"><a href="">Проживание</a></h4>
-          <p class="service-description">Отель Nestor Hotel 4*</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title"><a href="">Питание</a></h4>
-          <p class="service-description">Завтрак и ужин</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"></div>
-          <h4 class="service-title"><a href="">Программу тренировок</a></h4>
-          <p class="service-description">Ежедневные тренировки под руководством профессиональных тренеров</p>
-        </div>
-      </div>
-    </div>
-  </section>
 -->
 
 
-  <!--==========================
-  Team Section
-  ============================-->
-  <section id="team">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">21 - 28 апреля <br> 690 евро <br>В стоимость включено</h3>
-          <div class="section-title-divider"></div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-3">
-          <div class="member">
-             <div class="pic"><img src="img/team-1.jpg" alt=""></div>
-          <h4 class="service-title">Перелет</h4>
-          <p class="service-description">Киев - Айя-Напа - Киев</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="member">
-            <div class="pic"><img src="img/team-2.jpg" alt=""></div>
-          <h4 class="service-title">Проживание</h4>
-          <p class="service-description">Отель Nestor Hotel 4*</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="member">
-            <div class="pic"><img src="img/team-3.jpg" alt=""></div>
-          <h4 class="service-title">Питание</h4>
-          <p class="service-description">Завтрак и ужин</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="member">
-            <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-          <h4 class="service-title">Программа тренировок</h4>
-          <p class="service-description">Ежедневные тренировки под руководством профессиональных тренеров</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-  <!--==========================
-  Subscrbe 2 Section
-  ============================-->
-  <section id="subscribe2">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="subscribe-title">Осталось всего 8 мест</h3>
-         <!-- <p class="subscribe-text">Отдых с пользой под чутким руководством профессиональных тренеров!</p> -->
-        </div>
-        <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="https://www.facebook.com/fitcolumbus/" target="_blank">Забронировать</a>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!--==========================
   Contact Section
